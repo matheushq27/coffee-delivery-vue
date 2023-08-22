@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import CounterButton from './CounterButton.vue';
 </script>
 
 <template>
@@ -17,8 +17,7 @@
         <p>O tradicional café feito com água quente e grãos moídos</p>
     </div>
     <div class="card-coffee-footer">
-        
-        
+        <CounterButton />
     </div>
  </div>
 </template>
