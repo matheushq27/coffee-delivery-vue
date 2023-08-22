@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #8047F8;
+}
+
+h1, h3, h5{
+  font-family: 'Baloo 2', cursive;
+}
+
+.text-coffee-primary{
+  color: var(--color-primary);
+}
+
+.bg-coffee-primary{
+  background-color: var(--color-primary);
+}
