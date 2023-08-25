@@ -6,6 +6,10 @@ h1, h3, h5{
   font-family: 'Baloo 2', cursive;
 }
 
+.font-family-baloo-2{
+  font-family: 'Baloo 2', cursive;
+}
+
 .text-coffee-primary{
   color: var(--color-primary);
 }

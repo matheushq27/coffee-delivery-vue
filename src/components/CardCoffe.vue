@@ -30,7 +30,10 @@ function updateCounter(newCount: number) {
       <p>O tradicional café feito com água quente e grãos moídos</p>
     </div>
     <div class="card-coffee-footer">
-      <span>R$ 9,90</span>
+      <div>
+        <span class="simbol-money font-family-baloo-2">R$</span>
+        <span class="price font-family-baloo-2">9,90</span>
+      </div>
       <CounterButton @update="updateCounter" />
       <button class="card-coffee-btn-cart">
         <ph-shopping-cart :size="22" weight="fill" />
@@ -92,5 +95,16 @@ function updateCounter(newCount: number) {
     padding: 4px 8px;
     border-radius: 5px;
     color: #fff;
+}
+
+.simbol-money{
+  font-size: 15px;
+  margin-right: 5px;
+  color: #574F4D;
+}
+
+.price{
+  font-size: 25px;
+  color: #574F4D;
 }
 </style>
