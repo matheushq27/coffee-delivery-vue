@@ -13,9 +13,11 @@ import { PhShoppingCart, PhMapPin } from "@phosphor-icons/vue";
           <ph-map-pin :size="22" />
           Porto Alegre, RS
         </div>
-        <button class="btn-shopping-cart">
-          <ph-shopping-cart :size="22" weight="fill" />
-        </button>
+        <router-link to="/cart">
+          <button class="btn-shopping-cart">
+            <ph-shopping-cart :size="22" weight="fill" />
+          </button>
+        </router-link>
       </div>
     </div>
   </nav>

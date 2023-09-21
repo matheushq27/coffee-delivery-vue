@@ -3,6 +3,13 @@ import CounterButton from "./CounterButton.vue";
 import { PhShoppingCart } from '@phosphor-icons/vue'
 import { ref } from "vue";
 
+const { data } = defineProps({
+  data:{
+    type: Object,
+    required: true
+  }
+})
+
 const counter = ref(0);
 
 function updateCounter(newCount: number) {
@@ -17,22 +24,20 @@ function updateCounter(newCount: number) {
       <img
         class="card-coffee-img"
         alt="Imagem café"
-        src="../assets/img/expresso-tradicional.png"
+        :src="data.thumbnail"
       />
       <div class="box-card-coffee-tags">
-        <span class="card-coffee-tags">Tradicional</span>
-        <span class="card-coffee-tags">Com leite</span>
-        <span class="card-coffee-tags">Gelado</span>
+        <span v-for="(category, index) in data.categories" :key="index" class="card-coffee-tags">{{ category }}</span>
       </div>
     </div>
     <div class="card-coffee-body">
-      <h5>Expresso Tradicional</h5>
-      <p>O tradicional café feito com água quente e grãos moídos</p>
+      <h5>{{ data.title }}</h5>
+      <p>{{ data.description }}</p>
     </div>
     <div class="card-coffee-footer">
       <div>
         <span class="simbol-money font-family-baloo-2">R$</span>
-        <span class="price font-family-baloo-2">9,90</span>
+        <span class="price font-family-baloo-2">{{ data.price }}</span>
       </div>
       <CounterButton @update="updateCounter" />
       <button class="card-coffee-btn-cart">
